@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "mkycuwri",
+    "password": "RA9HxFZ1akXErorHb82bUWks9Xi3t1Gq",
+    "database": "mkycuwri",
+    "host": "rajje.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}

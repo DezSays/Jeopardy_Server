@@ -1,0 +1,23 @@
+{
+  "name": "jeopardy_server",
+  "version": "1.0.0",
+  "description": "Jeopardy project server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DezSays/Jeopardy_Server.git"
+  },
+  "author": "Dez, Wes, Tri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DezSays/Jeopardy_Server/issues"
+  },
+  "homepage": "https://github.com/DezSays/Jeopardy_Server#readme",
+  "dependencies": {
+    "pg": "^8.8.0",
+    "sequelize": "^6.26.0"
+  }
+}
