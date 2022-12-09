@@ -158,6 +158,12 @@ CREATE TABLE host (
 ALTER TABLE scoreboard ADD CONSTRAINT fk_scoreboard_gameID FOREIGN KEY(gameID)
 REFERENCES created_games (id);
 
+ALTER TABLE scoreboard ADD CONSTRAINT fk_scoreboard_userID FOREIGN KEY(userID)
+REFERENCES users (id);
+
+ALTER TABLE created_games ADD CONSTRAINT fk_created_games_hostID FOREIGN KEY(hostID)
+REFERENCES host (id);
+
 ALTER TABLE created_games ADD CONSTRAINT fk_created_games_cat1ID FOREIGN KEY(cat1ID)
 REFERENCES category1 (id);
 
@@ -175,13 +181,4 @@ REFERENCES category5 (id);
 
 ALTER TABLE created_games ADD CONSTRAINT fk_created_games_cat6ID FOREIGN KEY(cat6ID)
 REFERENCES category6 (id);
-
-
--- I was able to get everything above this to run, but these are still shooting off errors. Will look into more tomorrow. 
-
-ALTER TABLE users ADD CONSTRAINT fk_users_id_ranking_amountWon FOREIGN KEY(id, ranking, amountWon)
-REFERENCES scoreboard (userID, ranking, amountWon);
-
-ALTER TABLE host ADD CONSTRAINT fk_host_id FOREIGN KEY(id)
-REFERENCES created_games (hostID);
 
